@@ -133,6 +133,8 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .contacts a:hover,
 .contacts a:focus {
@@ -141,6 +143,7 @@ img {
 .contacts-icon {
   fill: currentColor;
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-nav {
@@ -461,11 +464,6 @@ img {
 
   justify-content: center;
 }
-.portfolio-button:hover,
-.portfolio-button:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
 
 .buttons .buttons-item + .buttons-item {
   margin-left: 8px;
@@ -498,12 +496,17 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
 .portfolio-button:focus {
   background-color: var(--accent-text-color);
   color: var(--hero-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .item-card p {
@@ -542,8 +545,12 @@ img {
 
   letter-spacing: 0.03em;
 }
-.portfolio-item:hover .portfolio-top-text,
-.portfolio-item:focus .portfolio-top-text {
+.team-portfolio-link {
+  transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-portfolio-link:hover .portfolio-top-text,
+.team-portfolio-link:focus .portfolio-top-text {
   transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -622,6 +629,7 @@ img {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .welcome-link-icon {
   fill: var(--hero-text-color);
@@ -655,11 +663,11 @@ img {
   position: absolute;
   max-width: 528px;
   height: 581px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 5px;
+  border-radius: 4px;
   transform: translate(-50%, -50%) scale(1) rotate(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -670,10 +678,13 @@ img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.close-button {
+  fill: #000000;
 }
